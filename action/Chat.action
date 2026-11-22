@@ -1,0 +1,16 @@
+# Chat.action
+# Goal
+string room_name        # 部屋名指定
+string model_name       # modelの名前
+ShotMessageSet request  # 部屋名に追加するメッセージセット
+bool is_stack           # このやり取りをroom_nameにメモリーするか
+---
+# Result
+ShotMessageSet result   # 返答メッセージセット
+float64 elapsed_time    # 返答まで何秒かかったか
+bool success            # 推論に成功したかどうか
+string reason           # successがFalseの場合に理由を記載
+---
+# Feedback
+string wip_result       # 途中経過のメッセージ
+# TODO FeedbackにShotMessageSetとするかどうか（途中経過の画像とかはいらないため現在は文字String型のみ）
